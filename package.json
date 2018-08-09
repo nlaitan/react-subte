@@ -3,14 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.16.3",
+    "fetch": "^1.1.0",
+    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.21",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
+    "react-moment": "^0.7.9",
+    "react-scripts": "1.1.4",
+    "superagent": "^3.8.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node server.js",
+    "dev": "concurrently 'nodemon server.js' 'webpack -w --config webpack.config.js'",
+    "build": "webpack --config webpack.config.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.6.1",
+    "css-loader": "^1.0.0",
+    "nodemon": "^1.18.3",
+    "style-loader": "^0.22.1",
+    "svg-loader": "0.0.2",
+    "webpack": "^3.11.0"
   }
 }

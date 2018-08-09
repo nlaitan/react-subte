@@ -1,0 +1,12 @@
+	constructor(){
+		super();
+		this.state = {
+			lastUpdate: ''
+		}
+	}
+	setLastHour() {
+		this.setState({
+			lastUpdate: Moment()
+		});	
+	}
+	
