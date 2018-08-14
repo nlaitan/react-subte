@@ -16,7 +16,7 @@ class Line extends Component {
 		}
 	}
 	viewState() {
-		request.get('http://localhost:3000/api/subtes/' + this.props.number)
+		request.get('/api/subtes/' + this.props.number)
 		.end((err,res) => {
 			const status = res.body.status;
 			this.setState({
